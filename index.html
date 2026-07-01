@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SipkeLog</title>
+    <link rel='stylesheet' href='style.css'>
+</head>
+
+<body>
+    <h1>ŠIPKELOG</h1>
+    <form id='workout-form'>
+        <label>Datum:
+            <input type='date' id='datum' required>
+        </label>
+
+        <label>Vezba:
+            <select id="vezba" required>
+                <option value="Sklekovi">Sklekovi</option>
+                <option value="Zgibovi">Zgibovi</option>
+                <option value="Propadanja">Propadanja</option>
+                <option value="Ruski">Ruski trbušnjak</option>
+            </select>
+        </label>
+
+        <label>Broj serija:
+            <input type='number' id='serije' min='1' required>
+        </label>
+
+        <label>Broj ponavljanja:
+            <input type='number' id='ponavljanje' min='1' required>
+        </label>
+
+        <button type='submit'>Dodaj trening</button>
+        <hr>
+
+
+    </form>
+    <h2>Istorija treninga:</h2>
+    <ul id='lista-tren'></ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+    <script src='script.js'></script>
+</body>
+
+</html>
